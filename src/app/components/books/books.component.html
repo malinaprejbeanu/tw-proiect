@@ -1,0 +1,9 @@
+<div class="main-container">
+  <mat-form-field class="search-field">
+    <input matInput placeholder="Search books" #input autocomplete="off" (keyup)="search($event.target)">
+  </mat-form-field>
+
+  <div class="data-container">
+    <app-book-preview (click)="goToOrders(book)" *ngFor="let book of books" [book]="book"></app-book-preview>
+  </div>
+</div>

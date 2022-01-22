@@ -1,0 +1,2 @@
+<app-books *ngIf="!showWallet" (goToOrdersEmitter)="receiveEmitter($event)"></app-books>
+<app-wallet [selectedBook]="selectedBook"  *ngIf="showWallet"></app-wallet>
